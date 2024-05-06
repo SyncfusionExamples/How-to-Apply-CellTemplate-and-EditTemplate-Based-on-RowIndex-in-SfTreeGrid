@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SfTreeGrid_WPF_NET60"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" SizeToContent="WidthAndHeight"
+        Title="MainWindow" >
     <Window.DataContext>
         <local:ViewModel  />
     </Window.DataContext>
@@ -16,7 +16,7 @@
 
         <DataTemplate x:Key="DefaultCellTemplate">
             <Grid>
-                <ComboBox Grid.Column="1" SelectedItem="{Binding SelectedComboItem}"  
+                <syncfusion:ComboBoxAdv Background="Transparent" BorderBrush="Transparent" Grid.Column="1" SelectedItem="{Binding SelectedComboItem}"  
                     ItemsSource="{Binding ComboBoxItems}" syncfusion:VisualContainer.WantsMouseInput="True"
                     syncfusion:FocusManagerHelper.FocusedElement="True" />
             </Grid>
@@ -24,12 +24,12 @@
 
         <DataTemplate x:Key="AlternateCellTemplate">
             <TextBlock VerticalAlignment="Center"
-			Text="{Binding Path=FirstName}"/>
+			Text="{Binding Path=Country}"/>
         </DataTemplate>
 
         <DataTemplate x:Key="DefaultEditTemplate">
             <Grid>
-                <ComboBox Grid.Column="1" SelectedItem="{Binding SelectedComboItem}"  
+                <syncfusion:ComboBoxAdv Grid.Column="1" SelectedItem="{Binding SelectedComboItem}"  
                                     ItemsSource="{Binding ComboBoxItems}" syncfusion:VisualContainer.WantsMouseInput="True" 
                                     syncfusion:FocusManagerHelper.FocusedElement="True" />
             </Grid>
@@ -38,7 +38,7 @@
         <DataTemplate x:Key="AlternateEditTemplate">
             <TextBox Height="20"  
 			VerticalAlignment="Center" syncfusion:FocusManagerHelper.FocusedElement="True" 
-			Text="{Binding Path=FirstName}" />
+			Text="{Binding Path=Country}" />
         </DataTemplate>
 
     </Window.Resources>
@@ -56,7 +56,7 @@
                 <syncfusion:TreeGridTextColumn HeaderText="ID"
                                             MappingName="ID"
                                             TextAlignment="Left" />
-                <syncfusion:TreeGridTemplateColumn MappingName="FirstName" HeaderText="First Name" CellTemplateSelector="{StaticResource cellTemplateSelector}"  
+                <syncfusion:TreeGridTemplateColumn MappingName="Country" HeaderText="Country" CellTemplateSelector="{StaticResource cellTemplateSelector}"  
                                                    EditTemplateSelector="{StaticResource editTemplateSelector}">
                     
                 </syncfusion:TreeGridTemplateColumn>

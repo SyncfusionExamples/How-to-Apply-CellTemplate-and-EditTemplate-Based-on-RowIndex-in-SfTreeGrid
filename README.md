@@ -1,8 +1,9 @@
 # How-to-Apply-CellTemplate-and-EditTemplate-Based-on-RowIndex-in-SfTreeGrid
 This example illustrates how to Apply CellTemplate and EditTemplate Based on RowIndex in SfTreeGrid
 
-Typically, the templates are loaded based on the value of the underlying data object. In some cases, you need to load the template based on the row index. To accomplish this, we have defined a static SfTreeGrid property in both the selector classes and assigned SfTreeGrid in the MainWindow class.
+Typically, in a template selector, the cell and edit templates are loaded based on the value of the underlying data object. In some cases, you need to load the template based on the row index. To accomplish this, we have defined a static SfTreeGrid property in both the selector classes and assigned SfTreeGrid in the MainWindow class.
 
+**XAML code:**
   
  ```js
 <Window.Resources>
@@ -89,7 +90,7 @@ public class CustomCellTemplateSelector : DataTemplateSelector
  ```
 
 Image reference:
-![image.png](https://support.syncfusion.com/kb/agent/attachment/article/15657/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIwNDI3Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.1E7443aJW6pCfU8BR96H7Uw_JeCa0GddT_NIqSD1nUk)
+![alt text](image.png)
 
 
 Take a moment to peruse the [WPF-SfTreeGrid Template Selector Documentation](https://help.syncfusion.com/wpf/treegrid/column-type#set-edittemplate-based-on-custom-logic), to learn more about template selector with examples.
